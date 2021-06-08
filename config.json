@@ -1,0 +1,11 @@
+{
+	"is_test": true,
+	"test_servers": ["506480079564439552"],
+	"bot_owners": ["248533411738681344"],
+	"default_prefix": ">",
+	"wok_setup": {
+		"commandsDir": "commands",
+		"featuresDir": "features",
+		"defaultLanguage": "portuguese"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"color": {
+		"bot": "#44B8BA",
+		"white": "#E7E8E8",
+		"black": "#31373D",
+		"purple": "#AA8ED4",
+		"blue": "#4189C0",
+		"green": "#7AB05F",
+		"yellow": "#FAC962",
+		"orange": "#F19026",
+		"brown": "#BF6951",
+		"red": "#DA3244"
+	},
+	"category":[
+		{
+			"name": "Jogos",
+			"emoji": "🎮"
+		}, {
+			"name": "Outros",
+			"emoji": "🧐"
+		}
+	]
+}
