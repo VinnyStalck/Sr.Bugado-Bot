@@ -19,6 +19,6 @@ client.once('ready', () => {
 });
 
 let token;
-if (!config.is_test) token = process.env.BOT_TOKEN
+if (!process.env.IS_TEST) token = process.env.BOT_TOKEN
 else token = process.env.TEST_BOT_TOKEN
 client.login(token);
