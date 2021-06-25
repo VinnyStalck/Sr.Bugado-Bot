@@ -131,6 +131,7 @@ module.exports = {
 			// Verifica se a reação é do jogador da vez
 			if (user.id === gameData[player].member.id) {
 				let passTurn = true;
+				
 				const insertPiece = (row, col) => {
 					// Verifica se o campo está vazio
 					if (esp.includes(board[row][col])) {
@@ -215,7 +216,7 @@ module.exports = {
 						embed: updatedEmbed
 					});
 				}
-			} else reaction.users.remove(user.id);
+			}
 		})
 	}
 }
