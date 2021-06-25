@@ -4,7 +4,6 @@
 	"default_prefix": ">",
 	"wok_setup": {
 		"commandsDir": "commands",
-		"featuresDir": "features",
 		"defaultLanguage": "portuguese"
 	}
 }
