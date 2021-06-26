@@ -8,9 +8,11 @@ const game = require('../../game.js');
 
 module.exports = {
 	name: "jogodavelha",
-	aliases: ['velha', 'jdv'],
+	aliases: ['jdv', 'velha'],
 	category: 'Jogos',
-	description: 'Jogue o jogo da Velha com alguém.',
+	description: 'Jogue o Jogo da Velha com alguém.',
+	expectedArgs: '<@Segundo_Jogador>',
+
 	callback: async ({
 		message,
 		args,
@@ -28,6 +30,9 @@ module.exports = {
 			// Se o segundo jogador ainda não estiver sido marcado
 			if (!player2) return;
 		}
+
+		// Verifica se o segundo jogador é um bot
+		if (player2.user.bot) return channel.send(`${player1}, não é possível jogar contra um bot.`);
 
 		// Se os dois jogadores são usuários diferentes
 		if (player1 !== player2) {

@@ -9,7 +9,7 @@ const game = require('../../game.js');
 module.exports = {
 	name: 'conecte4',
 	aliases: ['c4', 'connect4', 'conectequatro', 'connectfour'],
-	category: 'Games',
+	category: 'Jogos',
 	description: 'Jogue Conecte 4 com alguém.',
 	expectedArgs: '<@Segundo_Jogador>',
 
@@ -30,6 +30,9 @@ module.exports = {
 			// Se o segundo jogador ainda não estiver sido marcado
 			if (!player2) return;
 		}
+
+		// Verifica se o segundo jogador é um bot
+		if (player2.user.bot) return channel.send(`${player1}, não é possível jogar contra um bot.`);
 
 		// Verifica se os dois jogadores são usuários diferentes
 		if (player1 !== player2) {

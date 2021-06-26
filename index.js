@@ -15,10 +15,12 @@ client.once('ready', () => {
 		.setCategorySettings(category)
 		.setMongoPath(process.env.MONGO_URI);
 
-	console.log('O bot está pronto!');
+	log("Bot's client is ready.");
 });
 
 let token;
 if (process.env.IS_TEST === "FALSE") token = process.env.BOT_TOKEN
 else token = process.env.TEST_BOT_TOKEN
 client.login(token);
+
+const log = (string) => console.log(config.log + string);
