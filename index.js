@@ -9,6 +9,10 @@ const client = new Discord.Client({
 });
 
 client.once('ready', () => {
+	client.user.setActivity('ao comando: >help', { type: 'LISTENING' })
+		.then(presence => log(`Activity set to "${presence.activities[0].type} ${presence.activities[0].name}"`))
+		.catch(console.error);
+
 	new WOKCommands(client, config.wok_setup)
 		.setDefaultPrefix(config.default_prefix)
 		.setColor(color.bot)
@@ -23,4 +27,4 @@ if (process.env.IS_TEST === "FALSE") token = process.env.BOT_TOKEN
 else token = process.env.TEST_BOT_TOKEN
 client.login(token);
 
-const log = (string) => console.log(config.log + string);
+const log = (string) => console.log("Sr.Bugado > "+string);
